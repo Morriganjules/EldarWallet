@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "237252900210",
+    "project_id": "eldarwallet-5d78b",
+    "storage_bucket": "eldarwallet-5d78b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237252900210:android:2d9301cd9d337cbed799eb",
+        "android_client_info": {
+          "package_name": "com.example.eldarwallet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2a2mGTgCY3X345U3pktBIwAuimYZKzQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

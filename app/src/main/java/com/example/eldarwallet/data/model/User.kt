@@ -4,5 +4,5 @@ data class User(
     val name:String? = null,
     val lastName: String? = null,
     val email: String? = null,
-    val creditCards: List<CreditCard>? = null
+    val creditCards: String? = null
 )

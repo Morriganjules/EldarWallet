@@ -31,8 +31,6 @@ class CreateUserActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         auth = Firebase.auth
-        val database = Firebase.database
-        val myRef = database.getReference("user")
 
         viewModel = ViewModelProvider(this).get(CreateUserViewModel::class.java)
 
@@ -65,13 +63,11 @@ class CreateUserActivity : ComponentActivity() {
                                 createAuthUser(
                                     email = viewModel.emailUser.value,
                                     password = viewModel.passwordUser.value,
-                                    nombre = viewModel.userName.value,
-                                    apellido = viewModel.userName.value
                                 )
                                 saveUserInDatabase(
                                     email = viewModel.emailUser.value,
                                     nombre = viewModel.userName.value,
-                                    apellido = viewModel.userName.value
+                                    apellido = viewModel.userLastName.value
                                 )
                                 navigateToMain()
                             }
@@ -87,7 +83,7 @@ class CreateUserActivity : ComponentActivity() {
 
         val database = Firebase.database
         val usersRef = database.getReference("users")
-        val newUser = User(nombre, apellido, email, emptyList())
+        val newUser = User(nombre, apellido, email)
         if (userId != null) {
             usersRef.child(userId).setValue(newUser)
         }
@@ -99,7 +95,7 @@ class CreateUserActivity : ComponentActivity() {
         this.startActivity(intent)
     }
 
-    private fun createAuthUser(email: String, password: String, nombre: String, apellido: String) {
+    private fun createAuthUser(email: String, password: String) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {

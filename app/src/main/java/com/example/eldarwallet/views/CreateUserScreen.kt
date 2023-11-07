@@ -73,10 +73,10 @@ fun CreateUserScreen(
                 .padding(vertical = 8.dp)
         )
 
-        // Campo de nombre de usuario
+        // Campo de apellido de usuario
         TextField(
-            value = viewModel.userName.value,
-            onValueChange = { viewModel.userName.value = it },
+            value = viewModel.userLastName.value,
+            onValueChange = { viewModel.userLastName.value = it },
             label = { Text("Apellido") },
             modifier = Modifier
                 .fillMaxWidth()

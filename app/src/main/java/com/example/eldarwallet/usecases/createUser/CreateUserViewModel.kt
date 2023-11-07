@@ -13,5 +13,5 @@ class CreateUserViewModel(app: Application) : AndroidViewModel(app) {
     var passwordUser = mutableStateOf("")
     var repeatPassword = mutableStateOf("")
     var userName = mutableStateOf("")
-
+    var userLastName = mutableStateOf("")
 }

@@ -1,4 +1,4 @@
-package com.example.eldarwallet.usecases
+package com.example.eldarwallet.usecases.qrReader
 
 import android.Manifest
 import android.content.Context

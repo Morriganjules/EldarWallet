@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-feature android:name="android.hardware.camera" />
+
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -16,11 +17,16 @@
         android:theme="@style/Theme.EldarWallet"
         tools:targetApi="31">
         <activity
-            android:name=".usecases.QrActivity"
+            android:name=".usecases.addCreditCard.CreditCardAdd"
+            android:exported="false"
+            android:label="@string/title_activity_credit_card_add"
+            android:theme="@style/Theme.EldarWallet" />
+        <activity
+            android:name=".usecases.qrReader.QrActivity"
             android:exported="false"
             android:label="@string/title_activity_qr"
-            android:theme="@style/Theme.EldarWallet"
-            android:screenOrientation="fullSensor"/>
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.EldarWallet" />
         <activity
             android:name=".usecases.createUser.CreateUserActivity"
             android:exported="false"
@@ -43,8 +49,7 @@
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"
-            tools:replace="android:screenOrientation"
-            />
+            tools:replace="android:screenOrientation" />
     </application>
 
 </manifest>

@@ -95,6 +95,9 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+    //Coil
+    implementation("io.coil-kt:coil-compose:1.3.2")
+
     //Room
     val room_version = "2.5.0"
 

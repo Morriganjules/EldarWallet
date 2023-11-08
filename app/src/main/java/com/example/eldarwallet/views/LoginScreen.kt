@@ -1,14 +1,18 @@
 package com.example.eldarwallet.views
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.eldarwallet.R
 import com.example.eldarwallet.usecases.login.LoginViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -25,6 +29,7 @@ fun LoginScreen(
     ) {
         // Espacio en blanco en la parte superior
         Spacer(modifier = Modifier.weight(1f))
+
 
         // Campo de correo electrónico
         TextField(
